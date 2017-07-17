@@ -27,5 +27,7 @@ do
 done
 
 hisat2 $IDX -U reads/S27.fastq.gz 2>> $RUNLOG | samtools sort > bam/S27.bam 2>> $RUNLOG
+samtools index bam/S27.bam
 
 hisat2 $IDX -U reads/S27G-4.fastq.gz 2>> $RUNLOG | samtools sort > bam/S27G-4.bam 2>> $RUNLOG
+samtools index bam/S27G-4.bam
